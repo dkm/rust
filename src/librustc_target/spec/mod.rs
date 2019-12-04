@@ -57,6 +57,7 @@ mod haiku_base;
 mod hermit_base;
 mod hermit_kernel_base;
 mod l4re_base;
+mod k1c_base;
 mod linux_base;
 mod linux_kernel_base;
 mod linux_musl_base;
@@ -473,6 +474,7 @@ supported_targets! {
     ("thumbv8m.main-none-eabihf", thumbv8m_main_none_eabihf),
 
     ("msp430-none-elf", msp430_none_elf),
+    ("k1c-unknown-none-elf", k1c_unknown_none_elf),
 
     ("aarch64-unknown-cloudabi", aarch64_unknown_cloudabi),
     ("armv7-unknown-cloudabi-eabihf", armv7_unknown_cloudabi_eabihf),
