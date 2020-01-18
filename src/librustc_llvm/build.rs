@@ -77,6 +77,7 @@ fn main() {
         "sparc",
         "nvptx",
         "hexagon",
+	"kvx",
     ];
 
     let mut version_cmd = Command::new(&llvm_config);
