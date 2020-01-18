@@ -177,6 +177,12 @@ void LLVMRustAddLastExtensionPasses(
 #define SUBTARGET_AARCH64
 #endif
 
+#ifdef LLVM_COMPONENT_KVX
+#define SUBTARGET_KVX SUBTARGET(KVX)
+#else
+#define SUBTARGET_KVX
+#endif
+
 #ifdef LLVM_COMPONENT_MIPS
 #define SUBTARGET_MIPS SUBTARGET(Mips)
 #else
@@ -223,6 +229,7 @@ void LLVMRustAddLastExtensionPasses(
   SUBTARGET_X86                                                                \
   SUBTARGET_ARM                                                                \
   SUBTARGET_AARCH64                                                            \
+  SUBTARGET_KVX 							       \
   SUBTARGET_MIPS                                                               \
   SUBTARGET_PPC                                                                \
   SUBTARGET_SYSTEMZ                                                            \

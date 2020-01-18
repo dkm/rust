@@ -6,6 +6,7 @@ mod aarch64;
 mod amdgpu;
 mod arm;
 mod hexagon;
+mod kvx;
 mod mips;
 mod mips64;
 mod msp430;
@@ -555,6 +556,7 @@ impl<'a, Ty> FnAbi<'a, Ty> {
             "aarch64" => aarch64::compute_abi_info(cx, self),
             "amdgpu" => amdgpu::compute_abi_info(cx, self),
             "arm" => arm::compute_abi_info(cx, self),
+            "kvx" => kvx::compute_abi_info(self, 64),
             "mips" => mips::compute_abi_info(cx, self),
             "mips64" => mips64::compute_abi_info(cx, self),
             "powerpc" => powerpc::compute_abi_info(self),

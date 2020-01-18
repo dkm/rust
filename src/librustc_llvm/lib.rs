@@ -103,6 +103,11 @@ pub fn initialize_available_targets() {
                  LLVMInitializeRISCVTargetMC,
                  LLVMInitializeRISCVAsmPrinter,
                  LLVMInitializeRISCVAsmParser);
+    init_target!(llvm_component = "kvx",
+		 LLVMInitializeKVXTargetInfo,
+		 LLVMInitializeKVXTarget,
+		 LLVMInitializeKVXTargetMC,
+		 LLVMInitializeKVXAsmPrinter);
     init_target!(llvm_component = "sparc",
                  LLVMInitializeSparcTargetInfo,
                  LLVMInitializeSparcTarget,
