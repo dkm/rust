@@ -83,6 +83,11 @@ pub fn initialize_available_targets() {
                  LLVMInitializeRISCVTargetMC,
                  LLVMInitializeRISCVAsmPrinter,
                  LLVMInitializeRISCVAsmParser);
+    init_target!(llvm_component = "k1c",
+		 LLVMInitializeK1CTargetInfo,
+		 LLVMInitializeK1CTarget,
+		 LLVMInitializeK1CTargetMC,
+		 LLVMInitializeK1CAsmPrinter);
     init_target!(llvm_component = "sparc",
                  LLVMInitializeSparcTargetInfo,
                  LLVMInitializeSparcTarget,

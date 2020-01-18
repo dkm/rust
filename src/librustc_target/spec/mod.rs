@@ -65,6 +65,7 @@ mod windows_uwp_base;
 mod windows_uwp_msvc_base;
 mod thumb_base;
 mod l4re_base;
+mod k1c_base;
 mod fuchsia_base;
 mod redox_base;
 mod riscv_base;
@@ -470,6 +471,7 @@ supported_targets! {
     ("thumbv8m.main-none-eabihf", thumbv8m_main_none_eabihf),
 
     ("msp430-none-elf", msp430_none_elf),
+    ("k1c-unknown-cos", k1c_unknown_cos),
 
     ("aarch64-unknown-cloudabi", aarch64_unknown_cloudabi),
     ("armv7-unknown-cloudabi-eabihf", armv7_unknown_cloudabi_eabihf),
