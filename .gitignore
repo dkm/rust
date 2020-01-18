@@ -24,7 +24,7 @@ __pycache__/
 .favorites.json
 /Makefile
 /build/
-/config.toml
+## /config.toml
 /dist/
 /dl/
 /doc/

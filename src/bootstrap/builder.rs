@@ -910,6 +910,18 @@ impl<'a> Builder<'a> {
         //
         // These variables are primarily all read by
         // src/bootstrap/bin/{rustc.rs,rustdoc.rs}
+
+	println! ("RUSTBUILD_NATIVE_DIR={:?}\nRUSTC={:?}\nRUSTC_REAL={:?}\nRUSTC_STAGE={:?}\nRUSTC_DEBUG_ASSERTIONS={:?}\nRUSTC_SYSROOT={:?}\nRUSTC_LIBDIR={:?}\nRUSTDOC={:?}\n",
+		 env::var_os("RUSTBUILD_NATIVE_DIR"),
+		 env::var_os("RUSTC"),
+		 env::var_os("RUSTC_REAL"),
+		 env::var_os("RUSTC_STAGE"),
+		 env::var_os("RUSTC_DEBUG_ASSERTIONS"),
+		 env::var_os("RUSTC_SYSROOT"),
+		 env::var_os("RUSTC_LIBDIR"),
+		 env::var_os("RUSTDOC")
+	);
+	
         cargo
             .env("RUSTBUILD_NATIVE_DIR", self.native_dir(target))
             .env("RUSTC", self.out.join("bootstrap/debug/rustc"))

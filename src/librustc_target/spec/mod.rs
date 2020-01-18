@@ -68,6 +68,7 @@ mod netbsd_base;
 mod openbsd_base;
 mod redox_base;
 mod riscv_base;
+mod kvx_base;
 mod solaris_base;
 mod thumb_base;
 mod uefi_msvc_base;
@@ -77,6 +78,7 @@ mod windows_gnu_base;
 mod windows_msvc_base;
 mod windows_uwp_gnu_base;
 mod windows_uwp_msvc_base;
+
 
 #[derive(Clone, Copy, Debug, Eq, Ord, PartialEq, PartialOrd)]
 pub enum LinkerFlavor {
@@ -636,6 +638,7 @@ supported_targets! {
     ("armv7a-none-eabihf", armv7a_none_eabihf),
 
     ("msp430-none-elf", msp430_none_elf),
+    ("kvx-unknown-cos", kvx_unknown_cos),
 
     ("aarch64-unknown-cloudabi", aarch64_unknown_cloudabi),
     ("armv7-unknown-cloudabi-eabihf", armv7_unknown_cloudabi_eabihf),
