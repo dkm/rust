@@ -104,6 +104,8 @@ unsafe fn configure_llvm(sess: &Session) {
         // HACK(eddyb) LLVM inserts `llvm.assume` calls to preserve align attributes
         // during inlining. Unfortunately these may block other optimizations.
         add("-preserve-alignment-assumptions-during-inlining=false", false);
+        add("-disable-kvx-hwloops", false);
+        add("-disable-kvx-loadstore-packing", false);
 
         for arg in sess_args {
             add(&(*arg), true);
